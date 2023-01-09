@@ -1,0 +1,6 @@
+[tool.poetry]
+name = "sst_py"
+version = "0.0.1"
+description = "Genetech screening questionaire"
+authors = ["Lee Leavitt"]
+

@@ -1,0 +1,15 @@
+name: sst_py
+
+channels:
+- conda-forge
+- bioconda
+
+dependencies:
+- python=3.10
+- pip
+- poetry
+- gsutil
+- scanpy 
+- python-igraph 
+- leidenalg
+- ipykernel
