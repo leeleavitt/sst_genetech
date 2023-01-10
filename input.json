@@ -1,6 +1,12 @@
 {
     "sst_all.transcriptome_files": [
         "patient_files/cellranger_output/MantonBM1_HiSeq_1/raw_feature_bc_matrix.h5",
-        "patient_files/cellranger_output/MantonBM2_HiSeq_1/raw_feature_bc_matrix.h5"
+        "patient_files/cellranger_output/MantonBM2_HiSeq_1/raw_feature_bc_matrix.h5",
+        "patient_files/cellranger_output/MantonBM3_HiSeq_1/raw_feature_bc_matrix.h5",
+        "patient_files/cellranger_output/MantonBM4_HiSeq_1/raw_feature_bc_matrix.h5",
+        "patient_files/cellranger_output/MantonBM5_HiSeq_1/raw_feature_bc_matrix.h5",
+        "patient_files/cellranger_output/MantonBM6_HiSeq_1/raw_feature_bc_matrix.h5",
+        "patient_files/cellranger_output/MantonBM7_HiSeq_1/raw_feature_bc_matrix.h5",
+        "patient_files/cellranger_output/MantonBM8_HiSeq_1/raw_feature_bc_matrix.h5"
     ]
 }

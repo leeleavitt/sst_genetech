@@ -7,3 +7,15 @@ patient_files
 .womtool
 .cromwell
 cromwell*
+*h5*
+outputs.json
+stderr*
+stdout*
+task.log
+rerun
+workflow.log
+command
+
+inputs.json
+_LAST
+20230110_121237_sst_all/call-single*
