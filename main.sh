@@ -8,4 +8,4 @@ gsutil cp -r gs://terra-featured-workspaces/Cumulus/cellranger_output -I ./patie
 
 # Docker instructions
 docker build -t sst:latest .
-docker save -o docker_image.tar
+docker save -o docker_image.tar sst
