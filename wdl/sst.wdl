@@ -25,8 +25,10 @@ task single_sample {
         File transcriptome_file
     }
     
+    String transcriptome_filename = basename(transcriptome_file)
+
     command <<<
-        sst-genentech sst-workflow ~{transcriptome_file}
+        sst-genentech sst-workflow ~{transcriptome_filename}
     >>>
 
     runtime {
