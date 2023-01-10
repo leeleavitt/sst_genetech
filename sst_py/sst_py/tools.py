@@ -56,7 +56,7 @@ class sst_toolset:
         # idneitfy highly variable genes
         sc.pp.log1p(self.adata)
         sc.pp.highly_variable_genes(self.adata, min_mean=0.0125, max_mean=3, min_disp=0.5)
-        # sc.pl.highly_variable_genes(self.adata, )
+        sc.pl.highly_variable_genes(self.adata, show= False)
 
         # keep top 2000 variable genes
         sc.pp.filter_genes_dispersion(self.adata, n_top_genes=2000)
@@ -64,16 +64,18 @@ class sst_toolset:
     def umap_plotter(self):
         """Function to create a umap plot with leiden coloring"""
         sc.tl.pca(self.adata, svd_solver='arpack')
+        sc.pl.pca(self.adata, color='CST3', show = False)
+        sc.pl.pca_variance_ratio(self.adata, log=True, show=False)
 
         sc.pp.neighbors(self.adata, n_neighbors=100)
 
+        sc.tl.leiden(self.adata, 1.3)
+
         sc.tl.paga(self.adata)
         sc.pl.paga(self.adata, plot=False)  # remove `plot=False` if you want to see the coarse-grained graph
-
         sc.tl.umap(self.adata, init_pos='paga')
-        sc.tl.umap(self.adata)
 
-        sc.tl.leiden(self.adata, 1.3)
+        sc.tl.umap(self.adata)
         sc.pl.umap(self.adata, color=['leiden'], save=f"{self.sample_name}.png", show=False)
 
     def gene_rank_plotter(self):
@@ -83,7 +85,7 @@ class sst_toolset:
         sc.pl.rank_genes_groups(self.adata, n_genes=25, sharey=False, save=f"_{self.sample_name}.png", show=False)
 
     def saver(self):
-        os.makedirs("./output_h5")
+        os.makedirs("./output_h5", exist_ok=True)
         self.adata.write_h5ad(f"./output_h5/{self.sample_name}.h5ad")
 
 

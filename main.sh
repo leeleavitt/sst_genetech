@@ -3,7 +3,7 @@ gsutil cp -r gs://terra-featured-workspaces/Cumulus/cellranger_output -I ./patie
 
 
 # create an environment to install cromwell from conda
-.conda/bin/conda create -p .wdl -c bioconda cromwell
+.conda/bin/conda create -p .wdl -c bioconda cromwell womtool
 
 
 # Docker instructions
