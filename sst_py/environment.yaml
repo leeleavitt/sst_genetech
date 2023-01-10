@@ -9,7 +9,3 @@ dependencies:
 - pip
 - poetry
 - gsutil
-- scanpy 
-- python-igraph 
-- leidenalg
-- ipykernel
