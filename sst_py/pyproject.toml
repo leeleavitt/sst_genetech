@@ -5,6 +5,7 @@ description = "Genetech screening questionaire"
 authors = ["Lee Leavitt"]
 
 [tool.poetry.dependencies]
+python = "3.10.8"
 scanpy = "*"
 python-igraph = "*"
 leidenalg = "*"
@@ -18,4 +19,4 @@ requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
 
 [tool.poetry.scripts]
-sst_genentech = "__main__:main"
+sst-genentech = "sst_py.__main__:main"

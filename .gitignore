@@ -3,3 +3,4 @@
 patient_files
 .DS_Store
 .wdl
+*pyc
