@@ -8,7 +8,6 @@ sc.logging.print_header()
 sc.settings.set_figure_params(dpi=80, facecolor='white')
 
 
-fn = "./patient_files/cellranger_output/MantonBM1_HiSeq_1/raw_feature_bc_matrix.h5"
 import numpy as np
 import pandas as pd
 import scanpy as sc
