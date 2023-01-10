@@ -13,8 +13,9 @@ workflow sst_all {
     }
 
     output{
-        Array[Array[File]] output_h5ad = single_sample.output_h5ad
-        
+        Array[File] count_matrix_h5ad = flatten(single_sample.output_h5ad)
+        Array[File] umap_png = flatten(single_sample.output_umap)
+        Array[File] gene_rank_png = flatten(single_sample.output_gene_rank)
 
     }
 }
@@ -25,8 +26,12 @@ task single_sample {
     }
     
     command <<<
-        sst_genentech sst_workflow ~{transcriptome_file}
+        sst-genentech sst-workflow ~{transcriptome_file}
     >>>
+
+    runtime {
+        docker : "./"
+    }
 
     output{
         Array[File] output_h5ad = glob("./output_h5/*h5ad")
