@@ -4,3 +4,5 @@ patient_files
 .DS_Store
 .wdl
 *pyc
+.womtool
+.cromwell

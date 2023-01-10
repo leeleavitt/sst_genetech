@@ -30,7 +30,7 @@ task single_sample {
     >>>
 
     runtime {
-        docker : "./docker_image.tar"
+        docker : "sst:latest"
     }
 
     output{
