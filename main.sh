@@ -12,3 +12,7 @@ docker save -o docker_image.tar sst
 
 # running
 conda create -p .cromwell cromwell
+
+.cromwell/bin/cromwell run wdl/sst.wdl -i input.json
+
+java -Dconfig.file=custom.conf -jar ~/cromwell/cromwell-84.jar run wdl/sst.wdl -i input.json
