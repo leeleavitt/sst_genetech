@@ -20,9 +20,8 @@ sc.logging.print_header()
 sc.settings.set_figure_params(dpi=80, facecolor='white')
 
 
-fn = "./patient_files/cellranger_output/MantonBM1_HiSeq_1/raw_feature_bc_matrix.h5"
 class sst_toolset:
-    def __init__(self, fnn: str):
+    def __init__(self, fn: str):
         """Initialize the class with a filename and smaple name to referene throughout"""
         self.fn = fn
         self.sample_name = os.path.basename(os.path.dirname(fn))
