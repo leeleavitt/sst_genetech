@@ -15,3 +15,5 @@ For the CLI i decided to contain the software inside of a class. My reasoning be
 The naming of my files are not very good. I ran out of time troubleshooting running the workflow locally, and i had to eventually abandadon using `cromwell` and instead use `miniwdl`. With more time i would create better file names.
 
 I also did not have time to develop unit test or establish continuous integration workflows. Both of which I am capable.
+
+The requested output are within `./20230110_121237_sst_all/`
