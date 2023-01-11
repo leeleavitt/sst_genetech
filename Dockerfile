@@ -16,7 +16,4 @@ RUN conda init bash
 RUN conda env create -f=/code/sst_py/environment.yaml
 RUN pip install -e /code/sst_py/
 
-RUN echo "conda activate detection" >> ~/.bashrc
-ENV BASH_ENV /root/.bashrc
-
 WORKDIR /code
